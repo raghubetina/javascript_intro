@@ -179,18 +179,31 @@
   // Translate the following Ruby into Javascript.
 
   // def for_each_in(array, &instructions)
+     function for_each_in(array, instructions) {
+
   //   for i in 0...array.length
+       for (var i = 0; i < array.length; i++) {
+
   //     instructions.call(array[i])
+         instructions(array[i]);
+
   //   end
+       }
+
   // end
+     }
 
   // fruits = ["apples", "oranges", "bananas", "pears"]
+     var fruits = ["apples", "oranges", "bananas", "pears"];
 
   // for_each_in(fruits) do |f|
-  //   puts "I like #{f}."
-  // end
+     for_each_in(fruits, function(f) {
 
-  // Your code goes here.
+  //   puts "I like #{f}."
+       alert("I like " + f + ".");
+
+  // end
+     });
 </script>
 
 
