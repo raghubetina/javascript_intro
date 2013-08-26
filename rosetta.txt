@@ -1,0 +1,51 @@
+## Simple output
+
+puts "howdy!"
+
+alert("howdy!");
+
+## Defining a variable
+
+n = 5
+
+var n = 5;
+
+## Defining a method
+
+def greet
+  puts 'howdy!'
+end
+
+function greet() {
+  alert('howdy!');
+}
+
+## Defining a method with an argument
+
+def greet(name)
+  puts 'howdy, ' + name + '!'
+end
+
+function greet(name) {
+  alert('howdy' + name + '!');
+}
+
+## Sending a block of code to a method
+
+my_method do
+  puts 'howdy!'
+end
+
+my_method(function() {
+  alert('howdy!');
+});
+
+## Allowing a block of code to accept an input
+
+my_method do |person|
+  puts 'howdy, ' + person + '!'
+end
+
+my_method(function(person) {
+  alert('howdy' + person + '!');
+});
