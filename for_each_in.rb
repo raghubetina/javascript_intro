@@ -3,9 +3,15 @@
 # Do not use .each, .times, .upto, or any other built-in iterator.
 # How can you define a method to accept a chunk of code as an input?
 
+def for_each_in(array, &instructions)
+  for i in 0...array.length
+    instructions.call(array[i])
+  end
+end
+
 fruits = ["apples", "oranges", "bananas", "pears"]
 
-for_each_in fruits do |f|
+for_each_in(fruits) do |f|
   puts "I like #{f}."
 end
 
