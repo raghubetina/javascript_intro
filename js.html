@@ -1,0 +1,193 @@
+<script>
+  // Simple output
+
+  // puts "howdy!"
+  // alert("howdy!");
+
+
+  // Declaring local variables
+
+  // name = "Raghu"
+  // puts "howdy, #{name}!"
+
+  // var name = "Raghu";
+  // alert("howdy, " + name + "!");
+  // Note: there's no String interpolation in JS
+
+
+  // Defining methods
+
+  // def greet
+  //   puts "howdy!"
+  // end
+
+  // greet
+
+  // function greet() {
+  //   alert("howdy!");
+  // }
+
+  // greet();
+
+
+  // Defining a method that accepts an argument
+
+  // def greet(name)
+  //   puts "howdy, #{name}!"
+  // end
+
+  // function greet(name) {
+  //   alert("howdy, " + name + "!");
+  // }
+
+  // greet("Raghu");
+
+
+  // Conditionals
+
+  // city = "Toledo"
+  // if city == "Chicago"
+  //   puts "You live in the best city ever!"
+  // else
+  //   puts "You live in a so-so city."
+  // end
+
+  // var city = "Toledo";
+  // if (city == "Chicago") {
+  //   alert("You live in the best city ever!");
+  // }
+  // else {
+  //   alert("You live in a so-so city.");
+  // }
+  // Beware: there's also a === operator. Look it up.
+
+
+  // Incrementing an integer
+
+  // i += 1
+
+  // i++
+
+
+  // For loops
+
+  // for i in 2...6
+  //   puts i
+  // end
+
+  // for (var i = 2; i < 6; i++) {
+  //   alert(i);
+  // }
+
+
+  // Defining a method that accepts a block of code
+
+  // def my_method(&instructions)
+  //   instructions.call
+  // end
+
+  // my_method do
+  //   puts "Some instructions"
+  // end
+
+  // function myMethod(instructions) {
+  //   instructions();
+  // }
+
+  // myMethod(function() {
+  //   alert("Some instructions");
+  // });
+
+
+  // Defining a method that accepts an argument and a block
+
+  // def border(character, &instructions)
+  //   puts character
+  //   instructions.call
+  //   puts character
+  // end
+
+  // border("~") do
+  //   puts "howdy!"
+  // end
+
+
+  // function border(character, instructions) {
+  //   alert(character);
+  //   instructions();
+  //   alert(character);
+  // }
+
+  // border("~", function() {
+  //   alert("howdy!");
+  // });
+
+
+  // Providing block variables
+
+  // def my_method(&instructions)
+  //   instructions.call("Raghu")
+  // end
+
+  // my_method do |person|
+  //   puts "howdy, #{person}!"
+  // end
+
+  // function myMethod(instructions) {
+  //   instructions("Raghu");
+  // }
+
+  // myMethod(function(person) {
+  //   alert("howdy, " + person + "!");
+  // });
+
+
+  // Arguments, blocks, and block variables
+
+  // function myOtherMethod(greeting, instructions) {
+  //   alert(greeting);
+  //   instructions("Jeff");
+  // }
+
+  // myOtherMethod("howdy", function(name) {
+  //   alert(name);
+  // });
+
+  // Arrays
+
+  // fruits = ["apples", "oranges", "bananas"]
+  // puts fruits[1]
+
+  // var fruits = ["apples", "oranges", "bananas"];
+  // alert(fruits[1]);
+
+
+  // Challenge:
+
+  // Translate the following Ruby into Javascript.
+
+  // def for_each_in(array, &instructions)
+  //   for i in 0...array.length
+  //     instructions.call(array[i])
+  //   end
+  // end
+
+  // fruits = ["apples", "oranges", "bananas", "pears"]
+
+  // for_each_in(fruits) do |f|
+  //   puts "I like #{f}."
+  // end
+
+  // Your code goes here.
+</script>
+
+
+
+
+
+
+
+
+
+
+
