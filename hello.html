@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Hello JavaScript</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#hide').on("click", function() {
+        $('p').slideUp();
+        return false;
+      });
+
+      $('#show').on("click", function() {
+        $('p').slideDown();
+        return false;
+      });
+
+      $('#toggle').on("click", function() {
+        $('p').slideToggle();
+        return false;
+      });
+
+      $('#add').on("click", function() {
+        $('#add').parent().before('<p>Los Angeles</p>');
+      });
+    });
+  </script>
+</head>
+<body>
+
+
+  <h1>Cities</h1>
+  <puts id="best">Chicago</p>
+  <p>Atlanta</p>
+  <p>New York</p>
+  <p>San Francisco</p>
+  <p><a id="add" href="#">Add Los Angeles</a></p>
+
+  <div><a id="hide" href="https://m.wikipedia.org/">Click here to hide</a></div>
+  <div><a id="show" href="https://m.wikipedia.org/">Click here to show</a></div>
+  <div><a id="toggle" href="https://m.wikipedia.org/">Click here to toggle</a></div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
