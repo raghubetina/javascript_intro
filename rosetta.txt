@@ -4,7 +4,7 @@ puts "howdy!"
 
 alert("howdy!");
 
-## Defining a variable
+## Defining a local variable
 
 n = 5
 
@@ -13,39 +13,66 @@ var n = 5;
 ## Defining a method
 
 def greet
-  puts 'howdy!'
+  puts "howdy!"
 end
 
 function greet() {
-  alert('howdy!');
+  alert("howdy!");
 }
 
 ## Defining a method with an argument
 
 def greet(name)
-  puts 'howdy, ' + name + '!'
+  puts "howdy, " + name + "!"
 end
 
 function greet(name) {
-  alert('howdy' + name + '!');
+  alert("howdy" + name + "!");
+  // There is no string interpolation in JavaScript
 }
+
+## For loop
+
+for i in 2...6
+  puts i**2
+end
+
+for (var i = 2; i < 6; i++) {
+  alert(Math.pow(i, 2));
+  // There is no ** operator in JavaScript
+}
+
+## If/else
+
+if city == "Chicago"
+  puts "You live in the best city in the world!"
+else
+  puts "You live in an okay city."
+end
+
+if (city == "Chicago") {
+  alert("You live in the best city in the world!");
+} else {
+  alert("You live in an okay city.");
+}
+// Beware there's also a === operator in JavaScript. Check it out.
 
 ## Sending a block of code to a method
 
 my_method do
-  puts 'howdy!'
+  puts "howdy!"
 end
 
 my_method(function() {
-  alert('howdy!');
+  alert("howdy!");
 });
 
 ## Allowing a block of code to accept an input
 
 my_method do |person|
-  puts 'howdy, ' + person + '!'
+  puts "howdy, " + person + "!"
 end
 
 my_method(function(person) {
-  alert('howdy' + person + '!');
+  alert("howdy" + person + "!");
 });
