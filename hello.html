@@ -1,46 +1,33 @@
 <html>
 <head>
   <title>Hello JavaScript</title>
-  <script>
-    function hide() {
-      var cities = document.getElementsByTagName('p');
-
-      for (var i = 0; i < cities.length; i++) {
-        cities[i].style.display = "none";
-      }
-    }
-
-    function show() {
-      var cities = document.getElementsByTagName('p');
-
-      for (var i = 0; i < cities.length; i++) {
-        cities[i].style.display = "block";
-      }
-    }
-
-    function toggle() {
-      var cities = document.getElementsByTagName('p');
-
-      for (var i = 0; i < cities.length; i++) {
-        if (cities[i].style.display === "none") {
-          cities[i].style.display = "block";
-        }
-        else {
-          cities[i].style.display = "none";
-        }
-      }
-    }
-  </script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
+
   <h1>Cities</h1>
-  <p>Chicago</p>
+  <p id="best">Chicago</p>
   <p>Atlanta</p>
   <p>New York</p>
   <p>San Francisco</p>
 
-  <div><a href="#" onclick="hide();">Click here to hide</a></div>
-  <div><a href="#" onclick="show();">Click here to show</a></div>
-  <div><a href="#" onclick="toggle();">Click here to toggle</a></div>
+  <div><a id="hide" href="http://www.google.com">Click here to hide</a></div>
+  <div><a id="show" href="http://www.google.com">Click here to show</a></div>
+  <div><a id="toggle" href="http://www.google.com">Click here to toggle</a></div>
+
+  <script>
+    $('#hide').on("click", function() {
+      $('p').slideUp();
+      return false;
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
