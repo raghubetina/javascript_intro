@@ -1,21 +1,28 @@
 <script>
+  // Rule of thumb: put a semicolon at the end of every line that doesn't end in a curly
+
   // Simple output
+  // =============
 
   // puts "howdy!"
+
   // alert("howdy!");
 
 
   // Declaring local variables
+  // =========================
 
   // name = "Raghu"
   // puts "howdy, #{name}!"
 
   // var name = "Raghu";
   // alert("howdy, " + name + "!");
+
   // Note: there's no String interpolation in JS
 
 
-  // Defining methods
+  // Defining and calling methods
+  // ============================
 
   // def greet
   //   puts "howdy!"
@@ -30,7 +37,8 @@
   // greet();
 
 
-  // Defining a method that accepts an argument
+  // Methods that accept arguments
+  // =============================
 
   // def greet(name)
   //   puts "howdy, #{name}!"
@@ -44,6 +52,7 @@
 
 
   // Conditionals
+  // ============
 
   // city = "Toledo"
   // if city == "Chicago"
@@ -59,10 +68,12 @@
   // else {
   //   alert("You live in a so-so city.");
   // }
-  // Beware: there's also a === operator. Look it up.
+
+  // Beware: there's also a === (strict equivalence) operator. Look it up.
 
 
-  // Incrementing an integer
+  // Incrementing integers
+  // =====================
 
   // i += 1
 
@@ -70,100 +81,117 @@
 
 
   // For loops
+  // =========
 
   // for i in 2...6
-  //   puts i
+  //   puts i * i
   // end
 
   // for (var i = 2; i < 6; i++) {
-  //   alert(i);
+  //   alert(i * i);
   // }
 
 
-  // Defining a method that accepts a block of code
+  // Methods that accept blocks of code
+  // ==================================
 
-  // def my_method(&instructions)
+  // def announce(&instructions)
+  //   puts "********** DEAR PASSENGER **********"
   //   instructions.call
+  //   puts "********** THANK YOU FOR FLYING ONE-WAY AIR **********"
   // end
 
-  // my_method do
-  //   puts "Some instructions"
+  // announce do
+  //   puts "Your flight is boarding in 5 minutes."
   // end
 
-  // function myMethod(instructions) {
+  // function announce(instructions) {
+  //   alert("********** DEAR PASSENGER **********");
   //   instructions();
+  //   alert("********** THANK YOU FOR FLYING ONE-WAY AIR **********");
   // }
 
-  // myMethod(function() {
-  //   alert("Some instructions");
+  // announce(function() {
+  //   alert("Your flight is boarding in 5 minutes.");
   // });
 
 
-  // Defining a method that accepts an argument and a block
+  // Methods that accept arguments and blocks
+  // ========================================
 
-  // def border(character, &instructions)
-  //   puts character
+  // def announce(salutation, valediction, &instructions)
+  //   puts "********** #{salutation} **********"
   //   instructions.call
-  //   puts character
+  //   puts "********** #{valediction} **********"
   // end
 
-  // border("~") do
-  //   puts "howdy!"
+  // announce("DEAR PASSENGER", "THANK YOU FOR FLYING ONE-WAY AIR") do
+  //   puts "Your flight is boarding in 5 minutes."
   // end
 
 
-  // function border(character, instructions) {
-  //   alert(character);
+  // function announce(salutation, valediction, instructions) {
+  //   alert("********** " + salutation + " **********");
   //   instructions();
-  //   alert(character);
+  //   alert("********** " + valediction + " **********");
   // }
 
-  // border("~", function() {
-  //   alert("howdy!");
+  // announce("DEAR PASSENGER", "THANK YOU FOR FLYING ONE-WAY AIR", function() {
+  //   alert("Your flight is boarding in 5 minutes.");
   // });
 
 
   // Providing block variables
+  // =========================
 
-  // def my_method(&instructions)
-  //   instructions.call("Raghu")
+  // def announce(&instructions)
+  //   puts "********** DEAR PASSENGER **********"
+  //   instructions.call("*")
+  //   puts "********** THANK YOU FOR FLYING ONE-WAY AIR **********"
   // end
 
-  // my_method do |person|
-  //   puts "howdy, #{person}!"
+  // announce do |special_character|
+  //   puts "#{special_character} Your flight is boarding in 5 minutes. #{special_character}"
   // end
 
-  // function myMethod(instructions) {
-  //   instructions("Raghu");
+  // function announce(instructions) {
+  //   alert("********** DEAR PASSENGER **********");
+  //   instructions("*");
+  //   alert("********** THANK YOU FOR FLYING ONE-WAY AIR **********");
   // }
 
-  // myMethod(function(person) {
-  //   alert("howdy, " + person + "!");
+  // announce(function(specialCharacter) {
+  //   alert(specialCharacter + " Your flight is boarding in 5 minutes. " + specialCharacter);
   // });
 
 
-  // Method with argument, block, and block variable
+  // Methods with arguments, blocks, and block variables
+  // ===================================================
 
-  // def my_method(greeting, &instructions)
-  //   puts greeting
-  //   instructions.call("Jeff")
+  // def announce(salutation, valediction, &instructions)
+  //   puts "********** #{salutation} **********"
+  //   instructions.call("*")
+  //   puts "********** #{valediction} **********"
   // end
 
-  // my_method("howdy") do |name|
-  //   puts name
+  // announce("DEAR PASSENGER", "THANK YOU FOR FLYING ONE-WAY AIR") do |special_character|
+  //   puts "#{special_character} Your flight is boarding in 5 minutes. #{special_character}"
   // end
 
-  // function myMethod(greeting, instructions) {
-  //   alert(greeting);
-  //   instructions("Jeff");
+
+  // function announce(salutation, valediction, instructions) {
+  //   alert("********** " + salutation + " **********");
+  //   instructions("*");
+  //   alert("********** " + valediction + " **********");
   // }
 
-  // myMethod("howdy", function(name) {
-  //   alert(name);
+  // announce("DEAR PASSENGER", "THANK YOU FOR FLYING ONE-WAY AIR", function(specialCharacter) {
+  //   alert(specialCharacter + " Your flight is boarding in 5 minutes. " + specialCharacter);
   // });
 
 
   // Arrays
+  // ======
 
   // fruits = ["apples", "oranges", "bananas"]
   // puts fruits[1]
@@ -174,7 +202,8 @@
   // alert(fruits.length);
 
 
-  // Challenge:
+  // CHALLENGE
+  // =========
 
   // Translate the following Ruby into Javascript.
 
