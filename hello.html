@@ -5,15 +5,30 @@
     function hide() {
       var cities = document.getElementsByTagName('p');
 
-      // Your code goes here.
+      for (var i = 0; i < cities.length; i++) {
+        cities[i].style.display = "none";
+      }
     }
 
     function show() {
-      // Your code goes here.
+      var cities = document.getElementsByTagName('p');
+
+      for (var i = 0; i < cities.length; i++) {
+        cities[i].style.display = "block";
+      }
     }
 
     function toggle() {
-      // Your code goes here.
+      var cities = document.getElementsByTagName('p');
+
+      for (var i = 0; i < cities.length; i++) {
+        if (cities[i].style.display == "none") {
+          cities[i].style.display = "block";
+        }
+        else {
+          cities[i].style.display = "none";
+        }
+      }
     }
   </script>
 </head>
