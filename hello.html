@@ -2,8 +2,32 @@
 <head>
   <title>Hello JavaScript</title>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#hide').on("click", function() {
+        $('p').slideUp();
+        return false;
+      });
+
+      $('#show').on("click", function() {
+        $('p').slideDown();
+        return false;
+      });
+
+      $('#toggle').on("click", function() {
+        $('p').slideToggle();
+        return false;
+      });
+
+      $('#add').on("click", function() {
+        $('#add').parent().before('<p>Los Angeles</p>');
+      });
+    });
+  </script>
 </head>
 <body>
+
 
   <h1>Cities</h1>
   <p id="best">Chicago</p>
@@ -16,12 +40,7 @@
   <div><a id="show" href="http://www.google.com">Click here to show</a></div>
   <div><a id="toggle" href="http://www.google.com">Click here to toggle</a></div>
 
-  <script>
-    $('#hide').on("click", function() {
-      $('p').slideUp();
-      return false;
-    });
-  </script>
+
 </body>
 </html>
 
