@@ -1,8 +1,4 @@
-Quit all apps
-cd ~/code/am
-git clone https://github.com/tslsummer13/javascript_intro
-cd javascript_intro
-subl .
+# JavaScript Intro
 
 Examine each of the following Ruby scripts. Read the code, run them, change the code; experiment with them and try to understand what is going on.
 
@@ -13,3 +9,5 @@ In order:
 - border3.rb
 
 Think of questions!
+
+Then, study rosetta.html. Think of more questions! 
