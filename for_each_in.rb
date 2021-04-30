@@ -4,9 +4,7 @@
 # How can you define a method to accept a chunk of code as an input?
 
 def for_each_in(array, &instructions)
-  for i in 0...array.length
-    instructions.call(array[i])
-  end
+  # Your code goes here.
 end
 
 fruits = ["apples", "oranges", "bananas", "pears"]
